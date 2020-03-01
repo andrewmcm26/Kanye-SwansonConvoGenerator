@@ -27,8 +27,8 @@ namespace KanyeWest
             var swansonResponse = client.GetStringAsync(ronSwansonURL).Result;
             var kanyeQuote = JObject.Parse(kanyeResponse).GetValue("quote").ToString();
             var swansonQuote = JArray.Parse(swansonResponse).ToString().Replace("[", "").Replace("]", "").Replace('\"' , ' ').Trim();
-            Console.WriteLine($"\nKanye: {kanyeQuote}");
-            Console.WriteLine($"\nRon: {swansonQuote}");
+            Console.WriteLine($"\nKanye: {kanyeQuote} ");
+            Console.WriteLine($"\nRon: {swansonQuote} ");
             }
         }
     }
